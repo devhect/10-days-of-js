@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Buttons Grid</title>
+        <style>
+            .btn {
+                background-color: whitesmoke;
+                border: 1px solid gray;
+                color: black;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+                width: 30%;
+                height: 48px;
+                font-size: 24px;
+            }
+            #btns {
+                width: 75%;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="btns">
+            <button type="button" class="btn" id="btn1" onclick="">1</button>
+            <button type="button" class="btn" id="btn2" onclick="">2</button>
+            <button type="button" class="btn" id="btn3" onclick="">3</button>
+            <button type="button" class="btn" id="btn4" onclick="">4</button>
+            <button type="button" class="btn" id="btn5" onclick="updateButton()">5</button>
+            <button type="button" class="btn" id="btn6" onclick="">6</button>
+            <button type="button" class="btn" id="btn7" onclick="">7</button>
+            <button type="button" class="btn" id="btn8" onclick="">8</button>
+            <button type="button" class="btn" id="btn9" onclick="">9</button>
+        </div>
+        <script>
+            function updateButton() {
+                let storeBtn1=btn1.innerHTML;
+                btn1.innerHTML=btn4.innerHTML;
+                btn4.innerHTML=btn7.innerHTML;
+                btn7.innerHTML=btn8.innerHTML;
+                btn8.innerHTML=btn9.innerHTML;
+                btn9.innerHTML=btn6.innerHTML;
+                btn6.innerHTML=btn3.innerHTML;
+                btn3.innerHTML=btn2.innerHTML;
+                btn2.innerHTML=storeBtn1; 
+            };
+        </script>
+    </body>
+</html>
